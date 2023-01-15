@@ -1,0 +1,31 @@
+{{define "formularioEditar"}}
+{{template "cabecera"}}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST" action="/actualizar" class="form-group">
+            <div class="row mb-2"><h1>Formulario Persona</h1></div>
+                <div class="col-md-10"><input id="id" name="id" value="{{.Id}}" type="hidden" class="form-control"></div>
+            <div class="row mb-2">
+                <div class="col-md-2"><label >Correo: </label></div>
+                <div class="col-md-10"><input id="nombre" name="nombre" value="{{.Nombre}}" type="text" class="form-control" placeholder="Ingrese Nombre aquí"></div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-2"><label >Correo: </label></div>
+                <div class="col-md-10"><input id="correo" name="correo" value="{{.Correo}}" type="text" class="form-control" placeholder="Ingrese Correo aquí"></div>
+            </div>
+            <div class="row mb-2 text-center">
+              <div class="col">
+                <button type="submit" class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger" href="./inicio">Cancelar</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{template "footer"}}
+{{end}}

@@ -1,0 +1,29 @@
+{{define "formularioCrear"}}
+{{template "cabecera"}}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST" action="/insertar" class="form-group">
+            <div class="row mb-2"><h1>Formulario Persona</h1></div>
+            <div class="row mb-2">
+                <div class="col-md-2"><label >Nombre: </label></div>
+                <div class="col-md-10"><input id="nombre" name="nombre" type="text" class="form-control" placeholder="Ingrese nombre aquí"> </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-2"><label >Correo: </label></div>
+                <div class="col-md-10"><input id="correo" name="correo" type="text" class="form-control" placeholder="Ingrese Correo aquí"></div>
+            </div>
+            <div class="row mb-2">
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{template "footer"}}
+{{end}}
